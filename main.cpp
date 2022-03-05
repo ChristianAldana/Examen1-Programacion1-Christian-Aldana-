@@ -18,11 +18,11 @@ int main(int argc, char** argv) {
     int factorial=1;
     Num_02Fact=1;
 
+    //FUNCION PARA GENERAR TABLAS DE MULTIPLICAR
+    int  Num_01Tab;
 
     //GENERALES
     char op, opc1;
-
-
 
     /*<-- Estructura do -->*/
     do{
@@ -39,6 +39,7 @@ int main(int argc, char** argv) {
 
         cout<<"\n\nFUNCIONES:"<<endl;
         cout<<"CALCULAR FACTORIAL DE UN NUMERO (1)"<<endl;
+        cout<<"GENERADOR DE TABLAS DE MULTIPLICAR (2)"<<endl;
         cout<<"Opcion: ";
         cin>>op; //Ingreso de Valor a Variable
 
@@ -56,6 +57,19 @@ int main(int argc, char** argv) {
                 }
                 cout<<"La factorial del numero ingresado es de : "<< factorial; //Respuesta.
                 getch(); //Detener el programa
+                break;
+            }
+            case '2':{ //FUNCION PARA GENERAR TABLAS DE MULTIPLICAR
+                cout<<"       <--- GENERADOR DE TABLAS MULTIPLICAR --->"<<endl<<endl;
+
+                do{
+                    cout<<"Digite un numero: "; cin>>Num_01Tab; //Ingresar el dato.
+                }while((Num_01Tab<1) || (Num_01Tab>10));
+
+                for(int i=1;i<=30;i++){  //Generador de tablas hasta el 30.
+                    cout<<Num_01Tab<<" * "<<i<<" = "<<Num_01Tab*i<<endl;  //COMO SALDRA EN PANTALLA LA ANSWER.
+                }
+                getch(); //Detener el Programa
                 break;
             }
 

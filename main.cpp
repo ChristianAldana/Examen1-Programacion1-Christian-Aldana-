@@ -21,8 +21,21 @@ int main(int argc, char** argv) {
     //FUNCION PARA GENERAR TABLAS DE MULTIPLICAR
     int  Num_01Tab;
 
+    //Funcion para calcular numeros pares, y el promedio de los impares.
+    int impares,n;
+    int pares;
+    int sumas_pares;
+    int suma_impares;
+    int x;
+    suma_impares = 0;
+    sumas_pares = 0;
+    pares = 0;
+    impares = 0;
+
     //GENERALES
     char op, opc1;
+
+
 
     /*<-- Estructura do -->*/
     do{
@@ -40,6 +53,7 @@ int main(int argc, char** argv) {
         cout<<"\n\nFUNCIONES:"<<endl;
         cout<<"CALCULAR FACTORIAL DE UN NUMERO (1)"<<endl;
         cout<<"GENERADOR DE TABLAS DE MULTIPLICAR (2)"<<endl;
+        cout<<"CALCULAR NUMMEROS PARES (3)"<<endl;
         cout<<"Opcion: ";
         cin>>op; //Ingreso de Valor a Variable
 
@@ -69,6 +83,29 @@ int main(int argc, char** argv) {
                 for(int i=1;i<=30;i++){  //Generador de tablas hasta el 30.
                     cout<<Num_01Tab<<" * "<<i<<" = "<<Num_01Tab*i<<endl;  //COMO SALDRA EN PANTALLA LA ANSWER.
                 }
+                getch(); //Detener el Programa
+                break;
+            }
+            case '3':{ //Funcion para calcular numeros pares, y el promedio de los impares.
+                cout<<"       <--- FUNCION CALCULAR --->"<<endl<<endl;
+
+                for (x=1;x<=10;x++) { //EL USUARIO DEBE DE INGRESAR 10 NUMEROS SEGUIDOS.
+                    cout << "Ingrese un numero" << endl;
+                    cin >> n; //CAPTAR EL NUMERO.
+
+                    //Si el numero dividido 2, se utiliza un operador el cual dara el residuo de la operacion y si llega a 0 es par.
+                    if (n%2==0) {
+                        sumas_pares = sumas_pares+n; //Suman los numeros de la variable n
+                        pares = pares+1; //Se suman los numeros pares y se cuentan.
+                    } else {
+                        suma_impares = suma_impares+n; //Suman los numeros de la variable n
+                        impares = impares+1; //SE Suman las variables n + 1.
+                    }
+                }
+                cout << "La suma de los numeros pares es de:" << sumas_pares << endl;
+                cout << "Numeros pares:" << pares << endl;
+                cout << "El promedio de numeros impares es: " << suma_impares/impares << endl;
+
                 getch(); //Detener el Programa
                 break;
             }

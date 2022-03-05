@@ -35,6 +35,9 @@ int main(int argc, char** argv) {
     //DIAS DE LA SEMANA
     char dia;
 
+    //SISTEMA PARA VERIFICAR LA PASSWORD EN EL BANCO.
+    int password1, password ;
+    int i_ciclo, pin;
 
     //GENERALES
     char op, opc1;
@@ -59,6 +62,7 @@ int main(int argc, char** argv) {
         cout<<"GENERADOR DE TABLAS DE MULTIPLICAR (2)"<<endl;
         cout<<"CALCULAR NUMMEROS PARES (3)"<<endl;
         cout<<"DIAS LABORALES (4)"<<endl;
+        cout<<"VALIDAR PASSWORD (5)"<<endl;
         cout<<"Opcion: ";
         cin>>op; //Ingreso de Valor a Variable
 
@@ -151,6 +155,31 @@ int main(int argc, char** argv) {
             break;
             }
 
+            case '5':{ //SISTEMA PARA VERIFICAR LA PASSWORD EN EL BANCO.
+                cout<<"       <--- SISTEMA BANCARIO --->"<<endl<<endl;
+                    cout << "";
+
+                cout << " Hola " << "Bienvenid@ usuario " << endl; //Bienvenida al usuario.
+                cout << "" << endl;
+                cout << "A continuacion se le pedira verificar su password de su cuenta bancaria"  << endl;
+                cout << "para validar que usted todavia recuerde la password. \" " << endl;
+
+                for (i_ciclo = 1; i_ciclo <=3; i_ciclo++) {  //La variable de control con el 1 y solo se repite mientras sea menor a 3.
+                    cout<< ("\nIngresa Password\n");
+                    scanf("%d", &pin); //
+                    if (pin == 123456){  //PASSWORD CORRECTA.
+                        cout << "La password es correcta, gracias por su preferencia.";
+                        break;
+                    }
+                    else{
+                        cout << "La password es incorrecta. ";
+                        cout << "Comuniquese con el banco en caso de no recordar su password.";
+                    }
+                }
+
+                getch(); //Detener el progrma
+                break;
+            }
             default: { //Mensaje de Error
                 cout<<"Este Operador es Invalido, Preciona enter para continuar";
                 getch(); //Detener el programa

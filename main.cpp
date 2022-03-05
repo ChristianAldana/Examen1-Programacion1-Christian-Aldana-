@@ -32,6 +32,10 @@ int main(int argc, char** argv) {
     pares = 0;
     impares = 0;
 
+    //DIAS DE LA SEMANA
+    char dia;
+
+
     //GENERALES
     char op, opc1;
 
@@ -54,6 +58,7 @@ int main(int argc, char** argv) {
         cout<<"CALCULAR FACTORIAL DE UN NUMERO (1)"<<endl;
         cout<<"GENERADOR DE TABLAS DE MULTIPLICAR (2)"<<endl;
         cout<<"CALCULAR NUMMEROS PARES (3)"<<endl;
+        cout<<"DIAS LABORALES (4)"<<endl;
         cout<<"Opcion: ";
         cin>>op; //Ingreso de Valor a Variable
 
@@ -108,6 +113,42 @@ int main(int argc, char** argv) {
 
                 getch(); //Detener el Programa
                 break;
+            }
+            case '4':{ //DIAS DE LA SEMANA
+                cout<<"       <--- Dias de la semana --->"<<endl<<endl;
+            cout << "Ingrese un dia de la semana para saber si es laboral o no.";
+
+            //Cree una lista con abreviaturas para que el usuario pida un dia y el programa le diga si es laboral o no.
+                cout<<"\nLunes (L)"<<endl;
+                cout<<"Martes (M)"<<endl;
+                cout<<"Miercoles (X)"<<endl;
+                cout<<"Jueves (J)"<<endl;
+                cout<<"Viernes (V)"<<endl;
+                cout<<"Sabado (S)"<<endl;
+                cout<<"Domingo (D)"<<endl;
+                cout << "Ingrese la abreviatura para saber si el dia es laboral o no.";
+                cin >> dia;
+
+                switch (dia) {
+                    case 'L' : cout << "El dia lunes es laboral.";
+                        break;
+                    case 'M' : cout << "El dia martes es laboral.";
+                        break;
+                    case 'X' : cout << "El dia miercoles es laboral.";
+                        break;
+                    case 'J' : cout << "El dia jueves es laboral.";
+                        break;
+                    case 'V' : cout << "El dia viernes es laboral.";
+                        break;
+                    case 'S' : cout << "El dia sabado no es laboral.";
+                        break;
+                    case 'D' : cout << "El dia Domingo no es laboral.";
+                        break;
+                    default: cout << "Usted ha ingresado un dia incorrecto.";
+                }
+
+            getch(); //Detener el progrma
+            break;
             }
 
             default: { //Mensaje de Error
